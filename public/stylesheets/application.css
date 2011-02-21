@@ -1,0 +1,9 @@
+form.formtastic fieldset > ol > li.datetime input { width: auto; }
+form.formtastic fieldset > ol > li.monetary label.currency { width: auto; padding: 0.25em; }
+
+li.datetime input, li.date input {
+	display: inline;
+}
+li.datetime img, li.date img {
+	vertical-align: middle; margin-left: 0.25em;
+}

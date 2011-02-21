@@ -1,0 +1,37 @@
+= Formtastic Form Builder for Date, Time and DateTime data types and monetary values
+
+This form builder for Formtastic transforms Date, Time and DateTime data fields into
+date/time picker UI widgets. It also appends a currency symbol before monetary value
+data to indicate to the user the type of data required.
+
+== Usage
+
+* Add the following to the end of your Formtastic initializer file:
+
+	Formtastic::SemanticFormHelper.builder = CrudStar::SemanticFormBuilder
+	
+* Ensure you have included jQuery and jQuery UI frameworks in your layout. Also
+  include the Timepicker Addon (included).
+
+* Use the application.js as an example to hook the fields to the time picker.
+  Optionally apply the CSS styles (examples included).
+
+* Be sure to apply the locale information in the example English file to ensure
+  date/time formats are rendered correctly.
+
+* In your view, Date, Time and DateTime data will be automatically transformed. For
+  monetary values, use the following as an example:
+
+	<%= form.input :price, :label => "Price", :as => :monetary %>
+
+* You can change the monetary symbol used in the form builder. This is something
+  that could be improved upon.
+
+* Note that the time picker addon is not aware of time zones, so you could use the
+  #utc method with time data in your controller to ensure it is saved and read
+  correctly (if time zone data is not important to you). A more elaborate
+  implementation which preserves TZ data would be preferred, of course.
+
+== Copyright
+
+Copyright (c) 2010 Steve Lorek.
