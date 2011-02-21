@@ -8,7 +8,7 @@ data to indicate to the user the type of data required.
 
 * Add the following to the end of your Formtastic initializer file:
 
-	Formtastic::SemanticFormHelper.builder = CrudStar::SemanticFormBuilder
+	Formtastic::SemanticFormHelper.builder = SemanticFormBuilder
 	
 * Ensure you have included jQuery and jQuery UI frameworks in your layout. Also
   include the Timepicker Addon (included).
